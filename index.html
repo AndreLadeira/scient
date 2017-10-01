@@ -10,92 +10,141 @@
 
 	<!--STYLESHEET-->
 	<!--=================================================-->
- 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,700" rel="stylesheet">
+ 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
 	
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://dl.dropbox.com/s/uz6ts1h95w0s3s7/nifty.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.min.css" rel="stylesheet">
-	 <link href="css/main-dark.css" rel="stylesheet"> 
+	
+	<link href="css/login.css" rel="stylesheet">
 	
 	<!--SCRIPT-->
 	<!--=================================================-->
+
 	<!--Page Load Progress Bar -->
 	<link href="css/pace.css" rel="stylesheet">
 	<script src="js/pace.js"></script>
 
+
 </head>
 
 <body>
-    
-  <!-- Begin page content -->
-    
-    <div class="container content-wrapper">
-      <div class="container-fluid page-header">
-            <div class="clearfix">
-              <div class="col-sm-8 no-padding header-brand">
-                <!-- <a href="#"> -->
-					<img src="https://dl.dropbox.com/s/icledd2apxr3mxa/logo-lg.png" alt="Scient Logo" class="brand-icon">
-					<span class="brand-text">Scient <span class="text-thin text-muted">Weight Control</span></span>
-					<!--<span class="brand-text">Scient</span><br>-->
-                    <!--<span class="app-text text-muted text-uppercase">Weight Control</span>-->
-				<!-- </a> -->
-              </div>
-              <div class="col-sm-4 no-padding header-dropdown">
-                  <button class="btn dropdown-toggle transition-effect" id="menu1" data-toggle="dropdown">
-                    <span class="pull-right">
-                     <img class="img-circle img-user" src="https://dl.dropbox.com/s/4y5f9qb0g55hr0l/av1.png" alt="Profile Picture">
-                    </span>
-                    <div class="username pull-left">André Ladeira</div>
-                  </button>
-                  
-                  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1" >
-                    <li role="presentation">
-                      
-                      <span class="summary" >Last Login: tue nov 23, 2017</span>
- 
-                    </li>
-                    <li role="presentation" class="divider"></li>
-                    
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">
-                        <span class="badge badge-danger pull-right">9</span>
-						<i class="fa fa-envelope fa-fw fa-lg"></i> Messages
-                      </a>
-                    </li>
-                    
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">
-                        <i class="fa fa-user fa-fw fa-lg"></i> Profile
-                      </a>
-                    </li>
-                    
-                    <li role="presentation">
-                      <a role="menuitem" tabindex="-1" href="#">
-                        <i class="fa fa-gear fa-fw fa-lg"></i> Settings
-                      </a>
-                    </li> 
-                    
-                    <li role="presentation" >
-                      <a href="pages-login.html" class="btn logout transition-effect">
-                        <i class="fa fa-sign-out fa-lg"></i> Logout
-                      </a>
-                    </li>
-                    
-                  </ul>
-                  
-                  
-              </div>
-            </div>
-      </div>
-    </div>
-    
-  
-  <footer class="footer">
-      <div class="container content-wrapper">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>	
+	<div id="container" class="cls-container">
+		
+		<!-- BACKGROUND IMAGE -->
+		<!--===================================================-->
+		<div id="bg-overlay" class="bg-img login-bg-img"></div>
+		
+		
+		<!-- HEADER -->
+		<!--===================================================-->
+		<div class="cls-header cls-header-lg">
+			<div class="cls-brand">
+				<a class="box-inline">
+					<img alt="Scient Admin" src="https://dl.dropbox.com/s/do3881yan01e6az/logo.png">
+					<span class="brand-title">Scient <span class="text-thin">Weight Control</span></span>
+				</a>
+			</div>
+		</div>
+		<!-- END OF HEADER -->
+		
+		
+		<!-- CENTER SCREEN FORM -->
+		<!--===================================================-->
+		<div class="cls-content">
+			<!-- 1ST FORM: username and password -->
+			<!--===================================================-->
+			<div id="login-form" class="cls-content-sm panel">
+				<div class="panel-body">
+					<h4 class="pad-btm">Sign In to your account</h4>
+
+					<form>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-user"></i></div>
+								<input type="text" class="form-control" placeholder="Username">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 text-left checkbox">
+								<label class="form-checkbox form-icon">
+								<input type="checkbox"> Remember me
+								</label>
+							</div>
+							<div class="col-xs-4">
+								<div class="form-group text-right">
+								<!--<button class="btn btn-signin text-uppercase" type="button" onclick="doLogin()">Sign In</button>-->
+								<button id="btnsignin" class="btn btn-signin text-uppercase" type="submit" >Sign In</button>
+								</div>
+							</div>
+						</div>
+						<div id="login-status-bar" class="row">
+							<p id="status-msg" class="pad-top">
+							</p>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<!-- 2ND FORM: select a project to start -->
+			<!--===================================================-->
+
+			<div id="select-project-form" class="cls-content-sm panel">
+				<div class="panel-body">
+					
+					<img class="img-circle img-user img-sm" src="https://dl.dropbox.com/s/4y5f9qb0g55hr0l/av1.png" alt="Profile Picture">
+					<h4 class="">Hi André</h4>
+					<p>Last login: thu nov 26 2017, 08:16</p>
+					<h4 class="pad-btm pad-top">Please select a project</h4>
+					<form action="home.html">
+						<div class="row justify-content-center">
+    						<div class="col col-xs-12">
+      							<div class="form-group">
+									<select class="selectpicker" data-size="10" data-width="100%" data-container="body" data-live-search="true" >
+										<optgroup label="Customer Loren">
+											<option>Test Design 1</option>
+											<option>Hell of a design 2</option>
+										</optgroup>
+										<optgroup label="Customer Ipsun">
+											<option>Design X</option>
+											<option>Fixed Drilling Platform Client AA</option>
+											<option>180 Kbopd FPU Concept Client B</option>
+										</optgroup>
+									</select>
+      							</div>
+    						</div>
+    						<div class="col col-xs-3">
+      							<div class="form-group">
+        							<button class="btn btn-signin" type="submit">Go</button>
+      							</div>
+    						</div>
+						</div>
+						<div class="mar-btm"><em>- or -</em></div>
+						<button id="btn-continue-last-proj" class="btn btn-primary btn-lg btn-block" type="submit">
+							Continue with Design X
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="pad-ver">
+				<a href="./pwdForgot.html" class="btn-link mar-rgt">Forgot password ?</a>
+				<a href="./createAccount.html" class="btn-link mar-lft">Create a new account</a>
+			</div>
+		</div>
+		<!-- END OF CENTER SCREEN FORM-->
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
+
 
 	<!--JAVASCRIPT-->
 	<!--=================================================-->
@@ -104,8 +153,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.jquery.min.js"></script>
-	<script src="js/main.js"></script>
-
+    <script src="https://dl.dropbox.com/s/yp4p149khcrs320/nifty.js"></script>
 	
+	<script src="js/login.js"></script>
+
 </body>
 </html>
