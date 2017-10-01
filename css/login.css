@@ -1,0 +1,110 @@
+/*
+
+Adjust the properties of the brand name in the header
+
+*/
+
+#container.cls-container .cls-brand .brand-title
+{
+   font-size: 30px;
+   color:white;
+}
+
+/*
+
+Set the background image
+
+*/
+
+.login-bg-img
+{
+    background-image : url("https://dl.dropbox.com/s/hdyk5rote1tek35/balloon.jpg");
+}
+
+/*
+
+Set the visual properties of the 1st form components
+
+*/
+
+.btn-signin, .btn-primary
+{
+    background: rgba(255,140,0,0.8);
+    color: white;
+    border: 0;
+}
+ 
+.btn-signin:hover, .btn-primary:hover
+{
+    background: rgba(255,140,0,1.0);
+    color: white;
+}
+.btn-signin:active, .btn-primary:active
+{
+    background: rgba(255,140,0,0.8);
+    color: white;
+}
+.btn-inactive
+{
+    background: rgba(105,105,105,0.4);
+}
+/*
+
+Size of the circular user image
+
+*/
+
+.box-inline img
+{
+    width: 48px;
+}
+/*
+
+Hide elements that are displayed dynamically
+
+*/
+#login-status-bar
+{
+    display: none;
+}
+#select-project-form
+{
+    display: none;
+}
+#select-project-form form .row .col:nth-child(2)
+{
+    display: none;
+}
+
+#select-project-form .btn-signin
+{
+    /*border:0;
+    margin: 0;*/
+    width:100%;
+    opacity: 0.0;
+    /*padding: 0;
+    text-align: center;*/
+}
+
+#select-project-form .row .col
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#select-project-form .panel-body form .row .col-xs-3
+{
+    padding-left: 0;
+}
+.has-error
+{
+    color: red;
+}
+
+/* style properties of the 
+bootstrap-select component */
+
+.bootstrap-select > .btn,
+#select-project-form .btn-signin
+{
+    height: 34px;
+}

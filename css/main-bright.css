@@ -1,0 +1,19 @@
+body
+{
+    background: #e7ebee;
+}
+
+
+.navbar-header img
+{
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.container
+{
+    max-width: 1268px;
+    margin-left: auto;
+    margin-right: auto;
+}
